@@ -31,9 +31,9 @@ export default function App() {
     <View style={[styles.container, { padding: 50, backgroundColor: backColor }]}>
       <ActivityIndicator size='large' color='#61DBFB'/>
       {Platform.OS === 'ios' && <ProgressViewIOS progress={0.5}/>}
-      {Platform.OS === 'android' && <ProgressBarAndroid progress={0.5} styleAttr='Horizontal' indeterminate='false' color='blue'/>}
+      {Platform.OS === 'android' && <ProgressBarAndroid progress={0.5} styleAttr='Horizontal' indeterminate={false} color='blue'/>}
       <Button title='click me' onPress={onButtonPress}/>
-
+ 
       <View style={{flex:1, alignItems:'center', padding:10}}>
         <Text>OS: {Platform.OS}</Text>
         <Text>Height: {height}</Text>
